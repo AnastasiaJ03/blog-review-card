@@ -1,18 +1,139 @@
-/* Error: Undefined variable.
- *   ,
- * 9 |     border: 1px solid v.$blackg;
- *   |                       ^^^^^^^^^
- *   '
- *   src\scss\_card.scss 9:23  @use
- *   src\scss\main.scss 4:1    root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 9 \2502      border: 1px solid v.$blackg;\d\a   \2502                        ^^^^^^^^^\a   \2575 \a   src\\scss\\_card.scss 9:23  @use\a   src\\scss\\main.scss 4:1    root stylesheet";
+:root {
+  font-size: 10px;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: hsl(47, 88%, 63%);
+  font-family: "Figtree", sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: "Figtree";
+  src: url("../assets/fonts/Figtree-VariableFont_wght.ttf");
+}
+.card {
+  background-color: hsl(0, 0%, 100%);
+  max-width: 350px;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 1rem 1rem hsl(0, 0%, 7%);
+  border: 1px solid hsl(0, 0%, 7%);
+}
+.card__img {
+  border-radius: inherit;
+  overflow: hidden;
+  margin-block-end: 2rem;
+}
+.card__tag {
+  display: inline-block;
+  background-color: hsl(47, 88%, 63%);
+  color: hsl(0, 0%, 7%);
+  padding: 0.5rem;
+  font-weight: 700;
+  border-radius: 0.3rem;
+  font-size: 1.4rem;
+  margin-block-end: 1rem;
+}
+.card__date {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-block-end: 1rem;
+}
+.card__title {
+  font-size: 2.3rem;
+  font-weight: 900;
+  margin-block-end: 1rem;
+}
+.card__text {
+  color: hsl(0, 0%, 50%);
+  font-size: 1.6rem;
+  margin-block-end: 2rem;
+}
+.card__profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.card__profile img {
+  max-width: 3rem;
+}
+.card__profile-name {
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+/*# sourceMappingURL=main.css.map */
