@@ -1,0 +1,58 @@
+@use "./vars" as v;
+
+.card {
+    background-color: v.$white;
+    max-width: v.$max-width;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 1rem 1rem v.$black;
+    border: 1px solid v.$blackg;
+
+    &__img {
+        border-radius: inherit;
+        overflow: hidden;
+        margin-block-end: 2rem;
+    }
+
+    &__tag {
+        display: inline-block;
+        background-color: v.$main-bg;
+        color: v.$black;
+        padding: 0.5rem;
+        font-weight: 700;
+        border-radius: 0.3rem;
+        font-size: 1.4rem;
+        margin-block-end: 1rem;
+    }
+
+    &__date {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-block-end: 1rem;
+    }
+
+    &__title {
+        font-size: 2.3rem;
+        font-weight: 900;
+        margin-block-end: 1rem;
+    }
+
+    &__text {
+        color: v.$grey;
+        font-size: 1.6rem;
+        margin-block-end: 2rem;
+    }
+
+    &__profile {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        img {
+            max-width: 3rem;
+        }
+        &-name {
+            font-size: 1.4rem;
+            font-weight: 900;
+        }
+    }
+}
